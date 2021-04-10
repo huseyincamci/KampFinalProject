@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{05396E02-5EFB-4BCF-947C-44586D7FEA33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{00AB8514-390D-487D-9AA0-9107C2794652}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{05396E02-5EFB-4BCF-947C-44586D7FEA33}.Release|x64.Build.0 = Release|Any CPU
 		{05396E02-5EFB-4BCF-947C-44586D7FEA33}.Release|x86.ActiveCfg = Release|Any CPU
 		{05396E02-5EFB-4BCF-947C-44586D7FEA33}.Release|x86.Build.0 = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|x64.Build.0 = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Debug|x86.Build.0 = Debug|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|x64.ActiveCfg = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|x64.Build.0 = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|x86.ActiveCfg = Release|Any CPU
+		{00AB8514-390D-487D-9AA0-9107C2794652}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
