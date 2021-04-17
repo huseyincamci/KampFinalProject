@@ -12,6 +12,7 @@ using Core.CrossCuttingConcerns.Validation;
 using Core.Aspects.Autofac.Validation;
 using System.Linq;
 using Core.Utilities.Business;
+using BusinessAspects.Autofac;
 
 namespace Business.Concrete
 {
@@ -26,6 +27,8 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+        //Claims
+        [SecuredOperation("product.add")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
