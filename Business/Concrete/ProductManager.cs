@@ -13,6 +13,7 @@ using Core.Aspects.Autofac.Validation;
 using System.Linq;
 using Core.Utilities.Business;
 using BusinessAspects.Autofac;
+using Core.Aspects.Caching;
 
 namespace Business.Concrete
 {
@@ -28,8 +29,9 @@ namespace Business.Concrete
         }
 
         //Claims
-        [SecuredOperation("product.add")]
+        [SecuredOperation("product.add, admin")]
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
             var result = BusinessRules.Run(CheckIfProductCountOfCategoryIsCorrect(product.CategoryId),
@@ -44,6 +46,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductAdded);
         }
 
+        [CacheAspect]
         public IDataResult<List<Product>> GetAll()
         {
             if (DateTime.Now.Hour == 22)
@@ -58,6 +61,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == id));
         }
 
+        [CacheAspect]
         public IDataResult<Product> GetById(int productId)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
@@ -73,6 +77,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Update(Product product)
         {
             throw new NotImplementedException();
